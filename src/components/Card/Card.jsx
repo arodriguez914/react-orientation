@@ -3,17 +3,24 @@ import {useState} from 'react';
 
 function Card(props) {
     const [myName, setMyName] = useState ('Ariel');
+    const [counter, setCounter] = useState(0);
+
 
     function clickChangeName () {
         // set name to new name
         console.log('Test');
         setMyName('ARIEL');
+    }
+
+    function handleClick1 () {
+        setCounter(counter + 1);
+
     };
 
     return (
         <div className="card">
-           {/*homework is to create a state to increment the count*/} 
-          <button> count is 0 </button>
+           <button onClick={handleClick1}>Count</button>
+           <p>Count: {counter}</p>
           <p>{props.globalName ? props.globalName : myName}</p>
           <button onClick={clickChangeName}>Change Name</button>
           <p>
@@ -22,5 +29,6 @@ function Card(props) {
         </div>
     );
 }
+
 
 export default Card;
