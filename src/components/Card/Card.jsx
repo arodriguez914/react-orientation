@@ -12,6 +12,7 @@ function Card(props) {
 
     return (
         <div className="card">
+           {/*homework is to create a state to increment the count*/} 
           <button> count is 0 </button>
           <p>{props.globalName ? props.globalName : myName}</p>
           <button onClick={clickChangeName}>Change Name</button>
